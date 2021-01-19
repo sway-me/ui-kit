@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="base.css">
     <meta name="color-scheme" content="dark light">
-<!--    <meta http-equiv="refresh" content="3" >-->
+    <meta http-equiv="refresh" content="3" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Checkbox.js" defer></script>
 </head>
@@ -91,5 +91,75 @@ fn fibonacci(n: u32) -> u32 {
     <input type="file">
     <check-box>
 </div>
-</>
+<br>
+<br>
+<br>
+<h1 style="text-align: center">Palette </h1>
+<hr>
+<div style="padding: 2rem">
+    <style>
+        .swatch {
+            height:100px;
+            border: 3px solid white;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>color</th>
+            <th>${color}-light</th>
+            <th>${color}-light-grad</th>
+            <th>${color}-dark</th>
+            <th>${color}-dark-grad</th>
+        </tr>
+        <tr>
+            <td>blue</td>
+            <td class="swatch" style="background: var(--light-blue)" ></td>
+            <td class="swatch" style="background: var(--light-blue-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-blue)" ></td>
+            <td class="swatch" style="background: var(--dark-blue-grad)" ></td>
+        </tr>
+        <tr>
+            <td>cyan</td>
+            <td class="swatch" style="background: var(--light-cyan)" ></td>
+            <td class="swatch" style="background: var(--light-cyan-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-cyan)" ></td>
+            <td class="swatch" style="background: var(--dark-cyan-grad)" ></td>
+        </tr>
+        <tr>
+            <td>green</td>
+            <td class="swatch" style="background: var(--light-green)" ></td>
+            <td class="swatch" style="background: var(--light-green-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-green)" ></td>
+            <td class="swatch" style="background: var(--dark-green-grad)" ></td>
+        </tr>
+        <tr>
+            <td>purple</td>
+            <td class="swatch" style="background: var(--light-purple)" ></td>
+            <td class="swatch" style="background: var(--light-purple-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-purple)" ></td>
+            <td class="swatch" style="background: var(--dark-purple-grad)" ></td>
+        </tr>
+        <tr>
+            <td>red</td>
+            <td class="swatch" style="background: var(--light-red)" ></td>
+            <td class="swatch" style="background: var(--light-red-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-red)" ></td>
+            <td class="swatch" style="background: var(--dark-red-grad)" ></td>
+        </tr>
+        <tr>
+            <td>orange</td>
+            <td class="swatch" style="background: var(--light-orange)" ></td>
+            <td class="swatch" style="background: var(--light-orange-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-orange)" ></td>
+            <td class="swatch" style="background: var(--dark-orange-grad)" ></td>
+        </tr>
+        <tr>
+            <td>gray</td>
+            <td class="swatch" style="background: var(--light-gray)" ></td>
+            <td class="swatch" style="background: var(--light-gray-grad)" ></td>
+        </tr>
+    </table>
+</div>
 </html>
+
+

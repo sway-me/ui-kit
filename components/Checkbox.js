@@ -17,7 +17,7 @@ class Checkbox extends HTMLElement {
 
         style.textContent = `
             .checkbox {
-                background: var(--pink-gradient);
+                background: var(--pink-grad);
                 font-size: 1rem;
                 color: white;
                 cursor: pointer;
