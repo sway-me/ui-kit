@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <title>UI Kit</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="base.css">
     <meta name="color-scheme" content="dark light">
-    <meta http-equiv="refresh" content="3" >
+<!--    <meta http-equiv="refresh" content="3" >-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="Checkbox.js" defer></script>
+    <script src="components.js" defer></script>
 </head>
-
+<body>
+<div style="display: flex; justify-content: end; align-items: center; margin: 0.75rem 1rem 0;">
+   dark mode &emsp; <check-box id="mode"></check-box>
+</div>
+<script>
+    mode.onclick = () => {
+        const { theme } = document.documentElement.dataset
+        theme === 'dark' ? document.documentElement.dataset.theme = 'light' : document.documentElement.dataset.theme = 'dark'
+    }
+</script>
 <h1 style="text-align: center">Typography</h1>
 <hr>
 
@@ -30,13 +39,13 @@
     <div style="overflow-y: scroll;">
 
         <code>
-fn fibonacci(n: u32) -> u32 {
-    match n {
-        0 => 1,
-        1 => 1,
-        _ => fibonacci(n - 1) + fibonacci(n - 2),
-    }
-}
+            fn fibonacci(n: u32) -> u32 {
+            match n {
+            0 => 1,
+            1 => 1,
+            _ => fibonacci(n - 1) + fibonacci(n - 2),
+            }
+            }
         </code>
     </div>
     <br>
@@ -160,6 +169,7 @@ fn fibonacci(n: u32) -> u32 {
         </tr>
     </table>
 </div>
+</body>
 </html>
 
 

@@ -9,8 +9,8 @@ class Checkbox extends HTMLElement {
         const checkbox = document.createElement('div')
         checkbox.setAttribute('class', 'checkbox')
 
-
-
+        const inlineStyles = this.getAttribute('style')
+        checkbox.setAttribute('style', inlineStyles)
 
         // Create some CSS to apply to the shadow dom
         const style = document.createElement('style');
