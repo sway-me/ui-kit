@@ -1,12 +1,17 @@
-image: minio/mc
+image: 
+  name: minio/mc
+  entrypoint: ['']
+
 stages:
   - deploy
+
+before_script:
+  - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
 
 staging:
   stage: deploy
   script:
     - rm readme.md
-    - mc mb -p minio/sway-me/shared/ui-kit
     - mc cp --recursive *  minio/sway-me/shared/ui-kit 
   only:
     - master
