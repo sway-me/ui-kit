@@ -1,11 +1,11 @@
 stages:
   - deploy
 
-deploy_staging:
+staging:
   stage: deploy
   script:
     - rm readme.md
-    - wget https://dl.min.io/client/mc/release/linux-amd64/mc - O /
+    - wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /
     - chmod +x /mc
     - mc mb -p minio/sway-me/shared/ui-kit
     - /mc cp --recursive *  minio/sway-me/shared/ui-kit 
