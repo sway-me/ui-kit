@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+deploy_staging:
+  stage: deploy
+  script:
+    - wget https://dl.min.io/client/mc/release/linux-amd64/mc
+    - chmod +x mc
+    - ./mc cp --recursive * minio/sway-me/shared/ui-kit 
+  only:
+    - master
