@@ -1,4 +1,4 @@
-class Checkbox extends HTMLElement {
+export class Checkbox extends HTMLElement {
     constructor() {
         // Always call super first in constructor
         super();
