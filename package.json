@@ -20,7 +20,8 @@
     "lint-ci": "http  \"https://gitlab.com/api/v4/ci/lint?private_token=$GITLAB_TOKEN\" content=@./.gitlab-ci.yml | grep invalid && exit 1 || exit 0",
     "lint": "eslint --ext js components --quiet --fix",
     "depcheck": "npx depcheck --ignore-bin-package=true --skip-missing=true --ignores='eslint*' ",
-    "quality": "codeclimate analyze"
+    "quality": "codeclimate analyze",
+    "commit": "yarn format && yarn lint && yarn lint-ci && yarn depcheck && yarn quality &&  yarn build && npx cz"
   },
   "devDependencies": {
     "eslint": "^7.19.0",

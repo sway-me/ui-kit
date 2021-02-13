@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <title>UI Kit</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="base.css">
+    <meta name="color-scheme" content="dark light">
+<!--    <meta http-equiv="refresh" content="3" >-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sway-components.js" defer></script>
+    <link rel="shortcut icon" href="logo.svg" />
+</head>
+<body>
+<div style="display: flex; justify-content: end; align-items: center; margin: 0.75rem 1rem 0;">
+   dark mode &emsp; <check-box id="mode"></check-box>
+</div>
+<script>
+    mode.onclick = () => {
+        const { theme } = document.documentElement.dataset
+        theme === 'dark' ? document.documentElement.dataset.theme = 'light' : document.documentElement.dataset.theme = 'dark'
+    }
+</script>
+<h1 style="text-align: center">Typography</h1>
+<hr>
+
+<div style="padding: 2rem">
+
+    <h1>header 1</h1>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+    <p>
+        Voluptas repellendus accusantium accusantium fuga. Hic quia deleniti quia. Eum veniam quaerat nostrum id dolorem ullam. Illum consequuntur voluptatum vel. Qui consequuntur quia qui corrupti. Aperiam libero odio odit qui explicabo numquam aut earum.
+    </p>
+    <br>
+    <blockquote>"blockquote"</blockquote>
+    <br/>
+    <p>This is an  <a href="#">anchor link</a> in some text.</p>
+    <br>
+    <div style="overflow-y: scroll;">
+
+        <code>
+        fn fibonacci(n: u32) -> u32 {
+            match n {
+                0 => 1,
+                1 => 1,
+                _ => fibonacci(n - 1) + fibonacci(n - 2),
+            }
+        }
+        </code>
+    </div>
+    <br>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table>
+</div>
+
+<br>
+<br>
+<br>
+<h1 style="text-align: center">Inputs </h1>
+<hr>
+<div style="padding: 0 2rem;  height: 1200px; display: flex; flex-direction: column; justify-content: space-around;">
+    <h3>text inputs</h3>
+    <input type="text" placeholder="plain text">
+    <input type="email" placeholder="email">
+    <input type="password" placeholder="password">
+    <input type="search" placeholder="search">
+    <input type="url" placeholder="url">
+    <input type="number" placeholder="number">
+    <input type="date" >
+    <input type="time">
+    <br>
+    <h3>buttons</h3>
+    <input type="button" value="plain button" />
+    <input type="reset" value="reset">
+    <input type="submit" value="submit">
+    <br>
+    <h3>Specific Inputs</h3>
+    <!--  TODO: <check-box/>  <date-picker /> -->
+    <input type="range">
+    <input type="file">
+    <check-box>
+</div>
+<br>
+<br>
+<br>
+<h1 style="text-align: center">Palette </h1>
+<hr>
+<div style="padding: 2rem">
+    <style>
+        .swatch {
+            height:100px;
+            border: 3px solid white;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>color</th>
+            <th>${color}-light</th>
+            <th>${color}-light-grad</th>
+            <th>${color}-dark</th>
+            <th>${color}-dark-grad</th>
+        </tr>
+        <tr>
+            <td>blue</td>
+            <td class="swatch" style="background: var(--light-blue)" ></td>
+            <td class="swatch" style="background: var(--light-blue-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-blue)" ></td>
+            <td class="swatch" style="background: var(--dark-blue-grad)" ></td>
+        </tr>
+        <tr>
+            <td>cyan</td>
+            <td class="swatch" style="background: var(--light-cyan)" ></td>
+            <td class="swatch" style="background: var(--light-cyan-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-cyan)" ></td>
+            <td class="swatch" style="background: var(--dark-cyan-grad)" ></td>
+        </tr>
+        <tr>
+            <td>green</td>
+            <td class="swatch" style="background: var(--light-green)" ></td>
+            <td class="swatch" style="background: var(--light-green-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-green)" ></td>
+            <td class="swatch" style="background: var(--dark-green-grad)" ></td>
+        </tr>
+        <tr>
+            <td>purple</td>
+            <td class="swatch" style="background: var(--light-purple)" ></td>
+            <td class="swatch" style="background: var(--light-purple-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-purple)" ></td>
+            <td class="swatch" style="background: var(--dark-purple-grad)" ></td>
+        </tr>
+        <tr>
+            <td>red</td>
+            <td class="swatch" style="background: var(--light-red)" ></td>
+            <td class="swatch" style="background: var(--light-red-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-red)" ></td>
+            <td class="swatch" style="background: var(--dark-red-grad)" ></td>
+        </tr>
+        <tr>
+            <td>orange</td>
+            <td class="swatch" style="background: var(--light-orange)" ></td>
+            <td class="swatch" style="background: var(--light-orange-grad)" ></td>
+            <td class="swatch" style="background: var(--dark-orange)" ></td>
+            <td class="swatch" style="background: var(--dark-orange-grad)" ></td>
+        </tr>
+        <tr>
+            <td>gray</td>
+            <td class="swatch" style="background: var(--light-gray)" ></td>
+            <td class="swatch" style="background: var(--light-gray-grad)" ></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+

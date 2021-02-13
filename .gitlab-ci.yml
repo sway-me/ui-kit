@@ -63,6 +63,7 @@ dist:
     - mc cp base.css  minio/sway-me/shared/ui-kit
     - mc cp logo.svg  minio/sway-me/shared/ui-kit
     - mc cp sway-components.js  minio/sway-me/shared/ui-kit
+    - mc cp index.html  minio/sway-me/shared/ui-kit
   only:
     - master
 
@@ -71,10 +72,11 @@ pages:
   dependencies:
     - build
   script:
-    - cp sway-components.js public
-    - cp logo.svg public
-    - cp base.css public
-    - cp index.html public
+    - mkdir public
+    - cp sway-components.js public/
+    - cp logo.svg public/
+    - cp base.css public/
+    - cp index.html public/
   artifacts:
     paths:
       - public
