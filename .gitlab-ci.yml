@@ -1,17 +1,84 @@
-image: 
-  name: minio/mc
-  entrypoint: ['']
-
+image: node:14
 stages:
+  - verify
+  - build
   - deploy
 
-before_script:
-  - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+cache:
+  paths:
+    - node_modules
 
-staging:
-  stage: deploy
+before_script:
+  - yarn install
+
+format:
+  stage: verify
+  script: yarn format
+lint:
+  stage: verify
+  script: yarn lint
+
+depcheck:
+  stage: verify
+  script: yarn depcheck
+
+quality:
+  cache: {}
+  stage: verify
+  tags:
+    - threadripper
+  before_script:
+    - echo "Running Quality"
+  image: docker:stable
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:stable-dind
   script:
-    - rm readme.md
-    - mc cp --recursive *  minio/sway-me/shared/ui-kit 
+    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > quality.json
+  artifacts:
+    reports:
+      codequality: quality.json
+
+build:
+  stage: build
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - sway-components.js
   only:
     - master
+
+dist:
+  stage: deploy
+  dependencies:
+    - build
+  image:
+    name: minio/mc
+    entrypoint: [ '' ]
+  before_script:
+    - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+  script:
+    - mc cp base.css  minio/sway-me/shared/ui-kit
+    - mc cp logo.svg  minio/sway-me/shared/ui-kit
+    - mc cp sway-components.js  minio/sway-me/shared/ui-kit
+  only:
+    - master
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - cp sway-components.js public
+    - cp logo.svg public
+    - cp base.css public
+    - cp index.html public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+

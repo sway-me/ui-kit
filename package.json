@@ -1,0 +1,36 @@
+{
+  "name": "@sway-me/ui-kit",
+  "description": "",
+  "version": "1.0.0",
+  "main": "sway-components.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/sway-me/shared/ui-kit.git"
+  },
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://gitlab.com/sway-me/shared/ui-kit/issues"
+  },
+  "homepage": "https://gitlab.com/sway-me/shared/ui-kit#readme",
+  "scripts": {
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode=production",
+    "format": "prettier --write components/",
+    "lint-ci": "http  \"https://gitlab.com/api/v4/ci/lint?private_token=$GITLAB_TOKEN\" content=@./.gitlab-ci.yml | grep invalid && exit 1 || exit 0",
+    "lint": "eslint --ext js components --quiet --fix",
+    "depcheck": "npx depcheck --ignore-bin-package=true --skip-missing=true --ignores='eslint*' ",
+    "quality": "codeclimate analyze"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-security": "^1.4.0",
+    "prettier": "^2.2.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
