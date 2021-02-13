@@ -72,11 +72,12 @@ pages:
   dependencies:
     - build
   script:
-    - mkdir public
-    - cp sway-components.js public/
-    - cp logo.svg public/
-    - cp base.css public/
-    - cp index.html public/
+    - mkdir .public
+    - cp sway-components.js .public
+    - cp logo.svg .public
+    - cp base.css .public
+    - cp index.html .public
+    - mv .public public
   artifacts:
     paths:
       - public
