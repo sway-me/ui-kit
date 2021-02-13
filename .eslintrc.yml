@@ -1,0 +1,16 @@
+plugins:
+  - security
+extends:
+  - "eslint:recommended"
+  - airbnb-base
+  - prettier
+  - plugin:security/recommended
+rules:
+  security/detect-object-injection: 0
+  import/extensions: 0
+
+env:
+  browser: true
+
+parserOptions:
+  ecmaVersion: 11
