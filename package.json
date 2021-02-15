@@ -14,7 +14,7 @@
   },
   "homepage": "https://gitlab.com/sway-me/shared/ui-kit#readme",
   "scripts": {
-    "start": "webpack serve --mode=development",
+    "start": "webpack serve --mode=development --stats errors-only",
     "build": "webpack --mode=production",
     "format": "prettier --write components/",
     "lint-ci": "http  \"https://gitlab.com/api/v4/ci/lint?private_token=$GITLAB_TOKEN\" content=@./.gitlab-ci.yml | grep invalid && exit 1 || exit 0",

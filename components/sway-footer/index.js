@@ -36,7 +36,7 @@ export default class Footer extends HTMLElement {
         style="display: flex; flex-direction: column;  padding: 5.4rem 4rem 5rem;"
       >
         <footer-menus></footer-menus>
-        <div style="text-align: center">© Sway 2021. Opening gardens.</div>
+        <div style="text-align: center">© Sway 2021. Opening gardens 🌻. </div>
         <footer-icons></footer-icons>
       </div>
     `;
