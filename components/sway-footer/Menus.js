@@ -23,7 +23,7 @@ export default class Menus extends HTMLElement {
     return data.menuData
       .map(
         ({ title, links }) => `
-          <div style="width: 125px; margin-bottom: 6rem;">
+          <div style="width: 125px; margin-bottom: 4rem;">
             <h4 style="margin-bottom: 43px">${title}</h4>
             ${links
               .map(

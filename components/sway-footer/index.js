@@ -33,7 +33,7 @@ export default class Footer extends HTMLElement {
   static getInnerHTML() {
     return `
       <div
-        style="display: flex; flex-direction: column;  padding: 5.4rem 4rem 5rem;"
+        style="display: flex; flex-direction: column;  padding: 4rem 4rem 3rem;"
       >
         <footer-menus></footer-menus>
         <div style="text-align: center; font-size: 90%; margin-bottom: 2rem;">© Sway 2021. Opening gardens 🌻. </div>
