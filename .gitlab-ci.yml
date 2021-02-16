@@ -50,22 +50,22 @@ build:
   only:
     - master
 
-dist:
-  stage: deploy
-  dependencies:
-    - build
-  image:
-    name: minio/mc
-    entrypoint: [ '' ]
-  before_script:
-    - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
-  script:
-    - mc cp base.css  minio/sway-me/shared/ui-kit
-    - mc cp logo.svg  minio/sway-me/shared/ui-kit
-    - mc cp sway-components.js  minio/sway-me/shared/ui-kit
-    - mc cp index.html  minio/sway-me/shared/ui-kit
-  only:
-    - master
+#dist:
+#  stage: deploy
+#  dependencies:
+#    - build
+#  image:
+#    name: minio/mc
+#    entrypoint: [ '' ]
+#  before_script:
+#    - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+#  script:
+#    - mc cp base.css  minio/sway-me/shared/ui-kit
+#    - mc cp logo.svg  minio/sway-me/shared/ui-kit
+#    - mc cp sway-components.js  minio/sway-me/shared/ui-kit
+#    - mc cp index.html  minio/sway-me/shared/ui-kit
+#  only:
+#    - master
 
 pages:
   stage: deploy
