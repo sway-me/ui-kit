@@ -1,4 +1,4 @@
-import { iconData } from "./data.json";
+import data from "./data.json";
 
 export default class Icons extends HTMLElement {
   constructor() {
@@ -11,7 +11,7 @@ export default class Icons extends HTMLElement {
   }
 
   static getInnerHTML() {
-    return iconData
+    return data.iconData
       .map(
         ({ href, svgData }) => ` <a style="margin-left: 1.6rem" href="${href}">
         <svg width="33" height="31">

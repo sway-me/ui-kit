@@ -22,23 +22,23 @@ depcheck:
   stage: verify
   script: yarn depcheck
 
-quality:
-  cache: {}
-  stage: verify
-  tags:
-    - threadripper
-  before_script:
-    - echo "Running Quality"
-  image: docker:stable
-  variables:
-    DOCKER_DRIVER: overlay2
-  services:
-    - docker:stable-dind
-  script:
-    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > quality.json
-  artifacts:
-    reports:
-      codequality: quality.json
+#quality:
+#  cache: {}
+#  stage: verify
+#  tags:
+#    - threadripper
+#  before_script:
+#    - echo "Running Quality"
+#  image: docker:stable
+#  variables:
+#    DOCKER_DRIVER: overlay2
+#  services:
+#    - docker:stable-dind
+#  script:
+#    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > quality.json
+#  artifacts:
+#    reports:
+#      codequality: quality.json
 
 build:
   stage: build
