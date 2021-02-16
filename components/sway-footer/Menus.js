@@ -1,4 +1,4 @@
-import { menuData } from "./data.json";
+import data from "./data.json";
 
 export default class Menus extends HTMLElement {
   constructor() {
@@ -20,7 +20,7 @@ export default class Menus extends HTMLElement {
   }
 
   static getInnerHTML() {
-    return menuData
+    return data.menuData
       .map(
         ({ title, links }) => `
           <div style="width: 125px; margin-bottom: 6rem;">
