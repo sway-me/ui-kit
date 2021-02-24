@@ -46,26 +46,26 @@ build:
     - yarn build
   artifacts:
     paths:
-      - sway-components.js
+      - sway-ui.js
   only:
     - master
 
-#dist:
-#  stage: deploy
-#  dependencies:
-#    - build
-#  image:
-#    name: minio/mc
-#    entrypoint: [ '' ]
-#  before_script:
-#    - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
-#  script:
-#    - mc cp base.css  minio/sway-me/shared/ui-kit
-#    - mc cp logo.svg  minio/sway-me/shared/ui-kit
-#    - mc cp sway-components.js  minio/sway-me/shared/ui-kit
-#    - mc cp index.html  minio/sway-me/shared/ui-kit
-#  only:
-#    - master
+dist:
+  stage: deploy
+  dependencies:
+    - build
+  image:
+    name: minio/mc
+    entrypoint: [ '' ]
+  before_script:
+    - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
+  script:
+    - mc cp base.css  minio/sway-me/shared/ui-kit
+    - mc cp logo.svg  minio/sway-me/shared/ui-kit
+    - mc cp sway-ui.js  minio/sway-me/shared/ui-kit
+    - mc cp index.html  minio/sway-me/shared/ui-kit
+  only:
+    - master
 
 pages:
   stage: deploy
@@ -73,7 +73,7 @@ pages:
     - build
   script:
     - mkdir public
-    - cp sway-components.js public/
+    - cp sway-ui.js public/
     - cp logo.svg public/
     - cp base.css public/
     - cp index.html public/
