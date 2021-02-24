@@ -2,7 +2,7 @@ import BaseElement from "../BaseElement";
 import data from "./nav-data.json";
 import icons from "../shared-templates/icons";
 import toggleScroll from "../../utils/toggleScroll";
-import sidebar from "./sidebar";
+import { sidebarHTML, sidebarCSS } from "./sidebar";
 
 const layoutCSS = `
 .nav-container {
@@ -81,7 +81,7 @@ const setSvgAttributes = (svg, { lg, sm }) => {
 
 const navHTML = () => `
       <div class="nav-overlay"></div>
-      <div class="nav-sidebar">${sidebar(data.icons)}</div>
+      <div class="nav-sidebar">${sidebarHTML(data.icons)}</div>
       <div class="nav-container">
         <div class="nav-left">
           <a title="toggle" class="nav-toggle">
@@ -105,7 +105,7 @@ const navHTML = () => `
 export default class Nav extends BaseElement {
   constructor() {
     const nav = document.createElement("nav");
-    super(nav, layoutCSS);
+    super(nav, layoutCSS + sidebarCSS);
     this.nav = nav;
   }
 
