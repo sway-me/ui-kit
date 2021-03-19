@@ -24,6 +24,7 @@ const sharedStyles = css`
     min-height: 60px;
     height: 100px;
     display: flex;
+    z-index: 999;
   }
   nav a {
     display: flex;
