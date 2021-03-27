@@ -15,6 +15,7 @@ const layoutCSS = css`
     font-size: 90%;
     margin-bottom: 2rem;
   }
+
   .footer-icons {
     display: flex;
     justify-content: flex-end;
@@ -25,11 +26,11 @@ const layoutCSS = css`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 4rem;
-    menu-left: 3rem;
   }
   .footer-menus h4 {
     margin-bottom: 43px;
   }
+
   @media (max-width: 980px) {
     .footer-icons {
       justify-content: center;

@@ -5,15 +5,15 @@
       "links": [
         {
           "name": "What is Sway?",
-          "href": "https://docs.preview.swayme.xyz/intro"
+          "href": "https://docs.beta.swayme.xyz/intro"
         },
         {
           "name": "Project Glossary",
-          "href": "http://docs.preview.swayme.xyz/index"
+          "href": "http://docs.beta.swayme.xyz/index"
         },
         {
           "name": "Wiki",
-          "href": "http://wiki.preview.swayme.xyz/"
+          "href": "http://wiki.beta.swayme.xyz/"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "links": [
         {
           "name": "Mailing List",
-          "href": "https://lists.preview.swayme.xyz"
+          "href": "https://lists.beta.swayme.xyz"
         },
         {
           "name": "Matrix Room",
@@ -39,11 +39,11 @@
       "links": [
         {
           "name": "Fund a feature",
-          "href": "https://wiki.preview.swayme.xyz/index.php/needed-features"
+          "href": "https://wiki.beta.swayme.xyz/index.php/needed-features"
         },
         {
           "name": "Free Stickers",
-          "href": "http://preview.swayme.xyz/free-stuff"
+          "href": "http://beta.swayme.xyz/free-stuff"
         },
         {
           "name": "Buy Merch",
@@ -64,24 +64,24 @@
         },
         {
           "name": "Sway Kanbans",
-          "href": "http://wiki.preview.swayme.xyz/"
+          "href": "https://gitlab.com/groups/sway-me/-/boards/"
         }
       ]
     },
     {
-      "title": "People",
+      "title": "Humans",
       "links": [
         {
           "name": "Development",
-          "href": "https://preview.swayme.xyz/people#development"
+          "href": "https://beta.swayme.xyz/humans#development"
         },
         {
           "name": "Design",
-          "href": "http://preview.swayme.xyz/people#design"
+          "href": "http://beta.swayme.xyz/humans#design"
         },
         {
           "name": "Product",
-          "href": "http://preview.swayme.xyz/people#product"
+          "href": "http://beta.swayme.xyz/humans#product"
         }
       ]
     },
@@ -90,15 +90,15 @@
       "links": [
         {
           "name": "News",
-          "href": "http://preview.swayme.xyz/news"
+          "href": "http://beta.swayme.xyz/news"
         },
         {
           "name": "Logos + Artwork",
-          "href": "https://preview.swayme.xyz/press#materials"
+          "href": "https://beta.swayme.xyz/press#materials"
         },
         {
           "name": "Coverage",
-          "href": "https://preview.swayme.xyz/press#coverage"
+          "href": "https://beta.swayme.xyz/press#coverage"
         }
       ]
     }

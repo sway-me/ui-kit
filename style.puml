@@ -1,0 +1,129 @@
+@startuml
+skinparam backgroundColor transparent
+skinparam defaultFontName "Exo 2"
+skinparam shadowing false
+skinparam ArrowColor slategrey
+
+skinparam actor {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+
+skinparam agent {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+
+skinparam artifact {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam boundary {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam card {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam circle {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam cloud {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam collections {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam component {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam control {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam database {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam entity {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam file {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam folder {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam frame {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam interface {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam label {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam node {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam package {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam queue {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam rectangle {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam stack {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam storage {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+skinparam usecase {
+    BorderColor slategrey
+    BackgroundColor transparent
+    FontColor slategrey
+}
+@enduml
