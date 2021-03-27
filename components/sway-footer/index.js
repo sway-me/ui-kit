@@ -25,6 +25,7 @@ const layoutCSS = css`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 4rem;
+    menu-left: 3rem;
   }
   .footer-menus h4 {
     margin-bottom: 43px;
@@ -49,7 +50,7 @@ export default class Footer extends BaseElement {
         
         ${menus(data.menus)}
 </div>
-        <div class="footer-copy">© Sway 2021. Opening gardens 🌻. </div>
+        <div class="footer-copy">© Sway 2021. Opening gardens 🌻 </div>
         <div class="footer-icons">
             ${icons(data.icons, { height: 45, width: 45 })}
         </div>
