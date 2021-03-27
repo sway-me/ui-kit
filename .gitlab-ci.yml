@@ -58,10 +58,10 @@ dist:
   before_script:
     - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
   script:
-    - mc cp base.css    minio/shared/ui-kit
-    - mc cp logo.svg    minio/shared/ui-kit
-    - mc cp sway-ui.js  minio/shared/ui-kit
-    - mc cp index.html  minio/shared/ui-kit
+    - mc cp base.css    minio/shared/
+    - mc cp logo.svg    minio/shared/
+    - mc cp sway-ui.js  minio/shared/
+    - mc cp index.html  minio/shared/
   only:
     - master
 
