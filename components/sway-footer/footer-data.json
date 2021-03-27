@@ -73,15 +73,15 @@
       "links": [
         {
           "name": "Development",
-          "href": "https://beta.swayme.xyz/humans#development"
+          "href": "https://beta.swayme.xyz/humans"
         },
         {
           "name": "Design",
-          "href": "http://beta.swayme.xyz/humans#design"
+          "href": "http://beta.swayme.xyz/humans"
         },
         {
           "name": "Product",
-          "href": "http://beta.swayme.xyz/humans#product"
+          "href": "http://beta.swayme.xyz/humans"
         }
       ]
     },
@@ -94,11 +94,11 @@
         },
         {
           "name": "Logos + Artwork",
-          "href": "https://beta.swayme.xyz/press#materials"
+          "href": "https://beta.swayme.xyz/press"
         },
         {
           "name": "Coverage",
-          "href": "https://beta.swayme.xyz/press#coverage"
+          "href": "https://beta.swayme.xyz/press"
         }
       ]
     }
