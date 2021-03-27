@@ -22,23 +22,21 @@ depcheck:
   stage: verify
   script: yarn depcheck
 
-#quality:
-#  cache: {}
-#  stage: verify
-#  tags:
-#    - threadripper
-#  before_script:
-#    - echo "Running Quality"
-#  image: docker:stable
-#  variables:
-#    DOCKER_DRIVER: overlay2
-#  services:
-#    - docker:stable-dind
-#  script:
-#    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > quality.json
-#  artifacts:
-#    reports:
-#      codequality: quality.json
+quality:
+  cache: {}
+  stage: verify
+  before_script:
+    - echo "Running Quality"
+  image: docker:stable
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - docker:stable-dind
+  script:
+    - docker run --env CODECLIMATE_CODE="$PWD" --volume "$PWD":/code --volume /var/run/docker.sock:/var/run/docker.sock --volume /tmp/cc:/tmp/cc codeclimate/codeclimate analyze -f json > quality.json
+  artifacts:
+    reports:
+      codequality: quality.json
 
 build:
   stage: build
@@ -60,10 +58,10 @@ dist:
   before_script:
     - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
   script:
-    - mc cp base.css  minio/sway-me/shared/ui-kit
-    - mc cp logo.svg  minio/sway-me/shared/ui-kit
-    - mc cp sway-ui.js  minio/sway-me/shared/ui-kit
-    - mc cp index.html  minio/sway-me/shared/ui-kit
+    - mc cp base.css    minio/shared/ui-kit
+    - mc cp logo.svg    minio/shared/ui-kit
+    - mc cp sway-ui.js  minio/shared/ui-kit
+    - mc cp index.html  minio/shared/ui-kit
   only:
     - master
 
