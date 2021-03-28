@@ -54,7 +54,7 @@ dist:
     - build
   image:
     name: minio/mc
-    entrypoint: [ '' ]
+    entrypoint: [""]
   before_script:
     - mc alias set minio $MINIO_HOST $MINIO_ACCESS_KEY $MINIO_SECRET_KEY
   script:
@@ -78,5 +78,3 @@ pages:
       - public
   only:
     - master
-
-
