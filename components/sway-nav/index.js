@@ -85,7 +85,7 @@ const navHTML = () => `
       <div class="nav-container">
         <div class="nav-left">
           <a title="toggle" class="nav-toggle">
-              <svg width="30" height="30" viewBox="0 0 30 30">
+              <svg fill="white" width="30" height="30" viewBox="0 0 30 30">
                 <path
                   stroke="white"
                   stroke-linecap="round"
