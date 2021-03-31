@@ -117,7 +117,7 @@ export default class Nav extends BaseElement {
     const fullNavEnabled = this.getAttribute("full") === "";
     const fullNavDisabled = this.getAttribute("full") === null;
     if (fullNavDisabled) {
-      this.nav.style.height = "60px";
+      this.nav.style.height = "83px";
       const { noLabelSvgs, labelSvgs } = this.getSvgs();
       labelSvgs.forEach((svg) => {
         svg.style.display = "none";
@@ -136,7 +136,7 @@ export default class Nav extends BaseElement {
 
     window.onscroll = () => {
       if (window.innerWidth > 982) {
-        this.nav.style.height = `${getVal(123, 60)}px`;
+        this.nav.style.height = `${getVal(123, 83)}px`;
         noLabelSvgs.forEach((svg) => {
           setSvgAttributes(svg, dims);
         });
