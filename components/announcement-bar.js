@@ -2,14 +2,14 @@ import BaseElement from "./BaseElement";
 
 const layoutCSS = `
 .beta { 
-    background: var(--pink-grad);
-    color: white;
+    background: white;
     font-size: 85%;
     text-align: center;
     padding: 7px 0;
 }
 .beta > a {
   text-decoration: underline;
+  color: slategrey;
 }
 `;
 
