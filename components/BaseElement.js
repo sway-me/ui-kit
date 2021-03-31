@@ -13,6 +13,8 @@ const sharedStyles = css`
 
   footer,
   nav {
+    display: flex;
+    flex-direction: column;
     background: var(--light-gray-grad);
     color: white;
     fill: white;
@@ -22,7 +24,7 @@ const sharedStyles = css`
     position: sticky;
     top: 0;
     min-height: 60px;
-    height: 100px;
+    height: 123px;
     display: flex;
     z-index: 999;
   }
