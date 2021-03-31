@@ -24,7 +24,7 @@ const sharedStyles = css`
     position: sticky;
     top: 0;
     min-height: 60px;
-    height: 123px;
+    height: 100px;
     display: flex;
     z-index: 999;
   }

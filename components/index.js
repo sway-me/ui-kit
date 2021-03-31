@@ -1,9 +1,9 @@
 // import Checkbox from "./sway-checkbox";
 import Footer from "./sway-footer";
 import Nav from "./sway-nav";
-import Beta from "./beta-notification";
+import AnnouncementBar from "./announcement-bar";
 
 // customElements.define("sway-checkbox", Checkbox);
 customElements.define("sway-footer", Footer);
 customElements.define("sway-nav", Nav);
-customElements.define("beta-notification", Beta);
+customElements.define("announcement-bar", AnnouncementBar);

@@ -4,8 +4,9 @@ const layoutCSS = `
 .beta { 
     background: var(--pink-grad);
     color: white;
+    font-size: 85%;
     text-align: center;
-    padding: 2px 0;
+    padding: 7px 0;
 }
 .beta > a {
   text-decoration: underline;
@@ -21,7 +22,7 @@ export default class Beta extends BaseElement {
 
   connectedCallback() {
     this.beta.innerHTML = `<div class="beta" >
-        <b>Beta:</b> Currently being developed. Many features are not implemented.  &nbsp; <a href='https://gitlab.com/sway-me'> Contributions welcome</a> 🚀  
+        <b>BETA:</b> &nbsp; Many features not implemented. &nbsp; <a href='https://gitlab.com/groups/sway-me/-/boards/'>Contributions welcome</a> &nbsp; 🚀
     </div>`;
   }
 }
