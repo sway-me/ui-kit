@@ -101,6 +101,7 @@ const navHTML = () => `
         <div class="nav-center">${icons(data.icons.slice(1, -1), dims.lg)}</div>
         <div class="nav-right">${icons(data.icons.slice(-1), dims.lg)}</div>
       </div>
+      <beta-notification></beta-notification>
     `;
 export default class Nav extends BaseElement {
   constructor() {
@@ -135,7 +136,7 @@ export default class Nav extends BaseElement {
 
     window.onscroll = () => {
       if (window.innerWidth > 982) {
-        this.nav.style.height = `${getVal(100, 60)}px`;
+        this.nav.style.height = `${getVal(123, 60)}px`;
         noLabelSvgs.forEach((svg) => {
           setSvgAttributes(svg, dims);
         });
