@@ -56,11 +56,11 @@
       "links": [
         {
           "name": "Onboarding",
-          "href": "https://gitlab.com/sway-me/home/wiki/onboarding"
+          "href": "https://gitlab.com/sway-me/home/-/wikis/Onboarding"
         },
         {
           "name": "Contributor Wiki",
-          "href": "https://gitlab.com/sway-me/home/wiki"
+          "href": "https://gitlab.com/sway-me/home/-/wikis/Contributing"
         },
         {
           "name": "Sway Kanbans",
