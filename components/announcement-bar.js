@@ -6,6 +6,7 @@ const layoutCSS = `
     font-size: 85%;
     text-align: center;
     padding: 7px;
+    color: slategray;
 }
 .beta > a {
   text-decoration: underline;
